@@ -1,6 +1,6 @@
 //创建两个goroutine，交替打印数字和字母
 
-package main
+package cookbook
 
 import (
 	"fmt"
