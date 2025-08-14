@@ -1,6 +1,6 @@
 //创建两个goroutine，交替打印数字和字母
 
-package cookbook
+package main
 
 import (
 	"fmt"
@@ -35,7 +35,7 @@ func main() {
 				fmt.Println("num goroutine: charChan closed prematurely.")
 				return
 			}
-			fmt.Println(i)
+			fmt.Print(i, " ")
 
 			// 如果不是最后一个数字，就继续发送信号给 char 协程
 			// 如果是最后一个数字 (10)，则不发送，而是让 defer close(numChan) 来通知 char 协程结束
@@ -58,7 +58,7 @@ func main() {
 				fmt.Println("char goroutine: numChan closed prematurely.")
 				return
 			}
-			fmt.Println(string(i))
+			fmt.Print(string(i), " ")
 
 			// 如果不是最后一个字母，就继续发送信号给 num 协程
 			if i < 'J' {

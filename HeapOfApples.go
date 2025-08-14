@@ -45,7 +45,7 @@ https://www.acwing.com/problem/content/150/
 
 *******/
 
-package cookbook
+package main
 
 import (
 	"bufio"
